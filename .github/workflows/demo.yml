@@ -45,5 +45,7 @@ jobs:
           name: built-app-artifact
       - name: Read files list
         run: ls
+      - name: Show the file name
+        run: echo "${{ needs.build.outputs.test-value }}"
       - name: Deploy
         run: echo "Deploying..."
